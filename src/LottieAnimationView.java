@@ -111,6 +111,12 @@ import java.util.Map;
     init(attrs);
   }
 
+  public void setFileName(String fileName) {
+    if (fileName != null) {
+      setAnimation(fileName);
+    }
+  }
+
   private void init(@Nullable AttributeSet attrs) {
     TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.LottieAnimationView);
     int cacheStrategyOrdinal = ta.getInt(
